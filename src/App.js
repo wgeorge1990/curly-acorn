@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Todo from './Todo';
 
-function App() {
+export default function App() {
   const [todos, setTodos] = useState([]);
   const [value, setValue] = useState("");
 
@@ -19,16 +19,13 @@ function App() {
 
   return (
     <div className="App">
-      <form>
-        <input type='text' value={value} onChange={e => handleNewTodo(e)} />
-        <button onClick={e => addTodo(e)}>Add Todo</button>
-      </form>
-      <h1 className='header'>My Todos</h1>
+      <div className='m-2'>
+        <input className="p-3 m-1" type='text' value={value} onChange={e => handleNewTodo(e)} />
+        <div className='btn btn-warning m-2' onClick={e => addTodo(e)}>Add Todo</div>
+      </div>
       <div className="col-12">
         {todos.map(todo => <Todo key={todo} text={todo} />)}
       </div>
     </div>
   );
 }
-
-export default App;

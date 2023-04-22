@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
 
-function Todo(props) {
+export default function Todo(props) {
     const [showModal, setShowModal] = useState(true);
 
 
@@ -13,9 +13,7 @@ function Todo(props) {
         <div classname='card'>
             <div>
                 { showModal && <Modal modalHandler={modalHandler} text={props.text} onClick={modalHandler} />}
-                { !showModal && <div className="btn btn-primary" onClick={modalHandler}>show</div> }
+                { !showModal && <div className="btn btn-danger m-2" onClick={modalHandler}>show</div> }
             </div>
         </div> )
 }
-
-export default Todo;
