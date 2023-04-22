@@ -1,4 +1,4 @@
-# GitHub Codespaces ♥️ React
+# Reusable form and card generator - React Hooks
 
 Welcome to your shiny new Codespace running React! We've got everything fired up and running for you to explore React.
 
